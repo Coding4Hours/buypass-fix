@@ -3,7 +3,7 @@ function initPaymentRequest() {
     return new PaymentRequest(
         [
             {
-                supportedMethods: location.origin + "/pay/main.json",
+                supportedMethods: location.origin + "pay/main.json",
                 data: { url: document.querySelector("input").value },
             },
         ],
