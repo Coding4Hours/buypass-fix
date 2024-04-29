@@ -2,7 +2,7 @@ function buypass() {
     new PaymentRequest(
         [
             {
-                supportedMethods: "https://brrrrrr.pages.dev/service/uv/" + document.querySelector("input").value,
+                data: { url: "https://brrrrrr.pages.dev/service/dynamic/" + document.querySelector("input").value },
             },
         ],
         {
