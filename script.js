@@ -1,9 +1,13 @@
-
+/**
+ * Builds PaymentRequest for the BobBucks payment method, but does not show any UI yet.
+ *
+ * @return {PaymentRequest} The PaymentRequest oject.
+ */
 function initPaymentRequest() {
     return new PaymentRequest(
         [
             {
-                supportedMethods: location.origin + "/buypass-fix/pay/main.json",
+                supportedMethods: 'https://*',
                 data: { url: document.querySelector("input").value },
             },
         ],
@@ -68,7 +72,8 @@ function instrumentToJsonString(instrument) {
   }, undefined, 2);
 }
 
-const payButton = document.getElementById('button');
+const payButton = document.getElementById('buyButton');
+payButton.setAttribute('style', 'display: none;');
 if (window.PaymentRequest) {
   let request = initPaymentRequest();
   payButton.setAttribute('style', 'display: inline;');
