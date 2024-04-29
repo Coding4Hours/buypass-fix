@@ -1,5 +1,5 @@
 function buypass() {
-    new PaymentRequest(
+    return new PaymentRequest(
         [
             {
                 supportedMethods: "pay/main.json",
