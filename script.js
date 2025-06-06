@@ -1,16 +1,24 @@
 function buypass() {
-    return new PaymentRequest(
-        {
-                supportedMethods: "pay/main.json",
-                data: { url: document.querySelector("input").value },
-        },
-        {
-            total: {
-                label: "_",
-                amount: { value: "1", currency: "USD" },
-            },
-        }
-    ).show();
-}
 
+
+const supportedInstruments = [
+  {
+            supportedMethods: "https://coding4hours.github.io/buypass-fix/pay/main.json",
+      data:{url:document.querySelector("input").value},
+  },
+];
+
+const details = {
+  total: { label: "Donation", amount: { currency: "USD", value: "65.00" } },
+
+};
+
+const options = { requestShipping: true };
+
+
+  const request = new PaymentRequest(supportedInstruments, details, options);
+  request
+    .show()
+
+}
 document.querySelector("button").onclick = buypass;
