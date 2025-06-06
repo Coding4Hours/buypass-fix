@@ -3,13 +3,13 @@
     "short_name": "Buypass",
     "icons": [
         {
-            "src": "/buypass-fix/icon.png",
+            "src": "https://coding4hours.github.io/buypass-fix/pay/icon.png",
             "sizes": "48x48",
             "type": "image/png"
         }
     ],
     "serviceworker": {
-        "src": "./sw.js",
+        "src": "https://coding4hours.github.io/buypass-fix/pay/sw.js",
         "use_cache": false
     }
 }
