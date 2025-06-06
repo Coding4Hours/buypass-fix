@@ -1,6 +1,6 @@
 {
     "default_applications": [
-        "/buypass-fix/pay/pay.json"
+        "/pay/pay.json"
     ],
     "supported_origins": [
         "https://*"
