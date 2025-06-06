@@ -3,7 +3,7 @@ function buypass() {
 
 const supportedInstruments = [
   {
-            supportedMethods: "/pay/main.json",
+            supportedMethods: location.origin + "/pay/main.json",
       data:{url:document.querySelector("input").value},
   },
 ];
