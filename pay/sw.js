@@ -8,7 +8,7 @@ self.addEventListener("paymentrequest", async (event) => {
 
     event.respondWith(promise);
 
-    let client = await event.openWindow("/buypass-fix/navigate.html");
+    let client = await event.openWindow("/pay/navigate.html");
     if (!client) {
         return reject("Failed to open window.");
     }
