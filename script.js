@@ -3,7 +3,7 @@ function buypass() {
 
 const supportedInstruments = [
   {
-            supportedMethods: "https://coding4hours.github.io/buypass-fix/pay/main.json",
+            supportedMethods: "/pay/main.json",
       data:{url:document.querySelector("input").value},
   },
 ];
