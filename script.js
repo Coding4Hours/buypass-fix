@@ -31,8 +31,7 @@ const options = { requestShipping: true };
           value: "1", currency: "USD"
         },
       },
-    });
-  request
+    })
     .show()
 
 }
