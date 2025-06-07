@@ -16,7 +16,22 @@ const details = {
 const options = { requestShipping: true };
 
 
-  const request = new PaymentRequest(supportedInstruments, details, options);
+  const request = new PaymentRequest(    [
+      {
+        supportedMethods: location.origin + "/payment-manifest.json",
+        data: {
+          url: document.querySelector("input").value
+        },
+      },
+    ],
+    {
+      total: {
+        label: "_",
+        amount: {
+          value: "1", currency: "USD"
+        },
+      },
+    });
   request
     .show()
 
