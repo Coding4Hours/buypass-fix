@@ -1,3 +1,2 @@
-# Add the Link header for the payment method identifier
-/pay/main.json
-  Link: </pay/manifest.json>; rel="payment-method-manifest"
+/*
+  Link: <main.json>; rel="payment-method-manifest"
